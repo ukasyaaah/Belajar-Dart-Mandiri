@@ -9,11 +9,25 @@
    */
 
 // Cara Biasa
+var lowerCase = (String nama) {
+  return 'Nama Kamu ${nama.toLowerCase()}';
+};
+
+/* CARA SHORT EXPRESSION
+  1. Short Expression gausah pake () & return. 
+  2. Tapi gunakan tanda => 
+*/
+var upperCase = (String unnama) => 'Kalo Kamu ${unnama.toUpperCase()}';
+
+void sayHello(String name, String Function(String) filter) {
+  print('Selamat Pagi ${filter(name)}');
+}
 
 void main() {
-  var lowerCase = (String name) {
-    print('Haii $name'.toLowerCase());
-  };
+  // Anonymous Function as Parameter 
+  sayHello('Ukhasyah', (name) => name.toUpperCase());
 
-  print(lowerCase('hANi'));
+
+  print(lowerCase('OKHASYAH'));
+  print(upperCase('Faozan'));
 }
