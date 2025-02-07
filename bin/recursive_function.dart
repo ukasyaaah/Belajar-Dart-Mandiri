@@ -29,5 +29,5 @@ int loop(int value) {
 
 void main() {
   faktorialLoop(10);
-  print(loop(10));
+loop(10); // loop(10) => 10 * loop(9) => 10 * 9 * loop(8) sampai satu
 }
